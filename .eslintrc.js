@@ -16,7 +16,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    project: ['./tsconfig.json', './babel.config.js']
+    project: ['./tsconfig.json']
   },
   rules: {
     'react/display-name': 0,
