@@ -1,15 +1,5 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['react', 'prettier', '@typescript-eslint'],
-  extends: [
-    'eslint:recommended',
-    'prettier/@typescript-eslint',
-    'prettier/react',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -18,7 +8,24 @@ module.exports = {
     },
     project: ['./tsconfig.json']
   },
+  plugins: ['react', 'prettier', 'sonarjs', '@typescript-eslint'],
+  extends: [
+    'eslint:recommended',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
+    // Base rules
     curly: 1,
     'eol-last': 1,
     eqeqeq: 1,
@@ -33,6 +40,8 @@ module.exports = {
     radix: 1,
     'spaced-comment': 1,
     'valid-jsdoc': 1,
+
+    // React rules
     'react/display-name': 0,
     'react/prop-types': 0,
     'react/jsx-no-target-blank': 1,
@@ -53,6 +62,8 @@ module.exports = {
     'react/no-will-update-set-state': 1,
     'react/prefer-es6-class': [1, 'always'],
     'react/style-prop-object': 1,
+
+    // TypeScript rules
     '@typescript-eslint/ban-ts-ignore': 1,
     '@typescript-eslint/ban-types': 0,
     '@typescript-eslint/consistent-type-definitions': 1,
@@ -77,10 +88,5 @@ module.exports = {
     '@typescript-eslint/restrict-plus-operands': 1,
     '@typescript-eslint/unbound-method': 1,
     '@typescript-eslint/no-non-null-assertion': 1
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
   }
 };
