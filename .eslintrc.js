@@ -25,7 +25,7 @@ module.exports = {
     }
   },
   rules: {
-    // Base rules
+    // Base
     curly: 1,
     'eol-last': 1,
     eqeqeq: 1,
@@ -41,7 +41,7 @@ module.exports = {
     'spaced-comment': 1,
     'valid-jsdoc': 1,
 
-    // React rules
+    // React
     'react/display-name': 0,
     'react/prop-types': 0,
     'react/jsx-no-target-blank': 1,
@@ -63,7 +63,7 @@ module.exports = {
     'react/prefer-es6-class': [1, 'always'],
     'react/style-prop-object': 1,
 
-    // TypeScript rules
+    // TypeScript
     '@typescript-eslint/ban-ts-ignore': 1,
     '@typescript-eslint/ban-types': 0,
     '@typescript-eslint/consistent-type-definitions': 1,
@@ -87,6 +87,34 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': 1,
     '@typescript-eslint/restrict-plus-operands': 1,
     '@typescript-eslint/unbound-method': 1,
-    '@typescript-eslint/no-non-null-assertion': 1
+    '@typescript-eslint/no-non-null-assertion': 1,
+
+    // SonarJS
+    'sonarjs/cognitive-complexity': 1,
+    'sonarjs/max-switch-cases': 1,
+    'sonarjs/no-all-duplicated-branches': 1,
+    'sonarjs/no-collapsible-if': 1,
+    'sonarjs/no-collection-size-mischeck': 1,
+    'sonarjs/no-duplicate-string': 1,
+    'sonarjs/no-duplicated-branches': 1,
+    'sonarjs/no-element-overwrite': 1,
+    'sonarjs/no-extra-arguments': 1,
+    'sonarjs/no-identical-conditions': 1,
+    'sonarjs/no-identical-expressions': 1,
+    'sonarjs/no-identical-functions': 1,
+    'sonarjs/no-inverted-boolean-check': 1,
+    'sonarjs/no-one-iteration-loop': 1,
+    'sonarjs/no-redundant-boolean': 1,
+    'sonarjs/no-redundant-jump': 1,
+    'sonarjs/no-same-line-conditional': 1,
+    'sonarjs/no-small-switch': 1,
+    'sonarjs/no-unused-collection': 1,
+    'sonarjs/no-use-of-empty-return-value': 1,
+    'sonarjs/no-useless-catch': 1,
+    'sonarjs/prefer-immediate-return': 1,
+    'sonarjs/prefer-object-literal': 1,
+    'sonarjs/prefer-single-boolean-return': 1,
+    'sonarjs/prefer-while': 1
   }
 };
+
